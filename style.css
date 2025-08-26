@@ -1,0 +1,178 @@
+/* ==== 上段タイトルバー ==== */
+.masthead{
+  background:#2c3e50;
+  color:#fff;
+  text-align:center;
+  padding:14px 0;
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset;
+}
+.masthead .site-title{
+  font-weight:800;
+  font-size:24px;        /* スクショのサイズ感 */
+  letter-spacing:.5px;
+}
+
+/* ==== 下段メニューバー ==== */
+.menubar{
+  background:#3a5467;    /* 1段目より少し明るい青 */
+  box-shadow:0 2px 8px rgba(0,0,0,.10);
+}
+.menu-wrap{
+  position:relative;
+  max-width:1100px;
+  margin:0 auto;
+  padding:10px 16px;
+}
+.menu{
+  display:flex;
+  justify-content:center; /* メニューを中央寄せ */
+  gap:26px;               /* リンク間の等間隔 */
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.menu a{
+  color:#ecf0f1;
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  padding:6px 2px;
+  border-bottom:2px solid transparent;
+}
+.menu a:hover{
+  border-bottom-color:#fff;
+}
+
+/* English を右端に固定 */
+.lang{
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#ffd54a;
+  font-weight:800;
+  text-decoration:none;
+}
+
+/* モバイル調整 */
+@media (max-width: 768px){
+  .masthead .site-title{ font-size:20px; }
+  .menu{ gap:14px; flex-wrap:wrap; }
+  .menu a{ font-size:14px; }
+}
+
+
+/* ===== Section Headings (見出し用) ===== */
+
+ /* section h2 { */
+  /* font-size: 1.8em;         /* 本文より大きく */ */
+  /* font-weight: 700;         /* 太字 */ */
+  /* color: #2c3e50;           /* 濃い紺系の文字色 */ */
+  /* margin: 40px 0 20px;      /* 上下余白 */ */
+  /* border-left: 6px solid #3498db; /* 左に青いライン */ */
+  /* padding-left: 12px;       /* 文字とラインの間隔 */ */
+  /* line-height: 1.4; */
+ /* } */
+
+]
+/* === Full-width section headings (same color as top bar) === */
+section h2,
+.heading-band {
+  display: block;
+  width: 100%;
+  margin: 36px 0 18px;
+  padding: 14px 0;
+  background: #2c3e50;          /* ← masthead と同じ色 */
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.2;
+  border: 0;
+  border-radius: 0;              /* 角丸をなくす */
+  box-shadow: none;              /* 影をなくす */
+}
+
+/* 見出し直後の本文の上余白だけ整える（任意） */
+section h2 + * {
+  padding-top: 14px;
+  border-top: none;
+}
+
+
+ /* セクション見出し（中央揃え＋背景色） */
+section h2 {
+  background-color: #2c3e50;  /* ← ナビゲーションバーと同じ色 */
+  color: white;               /* 白文字で見やすく */
+  text-align: center;         /* 中央揃え */
+  padding: 12px 0;            /* 上下に余白を追加して見やすく */
+  margin: 30px 0 20px 0;      /* セクションとの間に余白 */
+  width: 100%;                /* 行全体に背景色を適用 */
+}
+
+
+ 
+section h3 {
+  font-size: 1.4em; 
+  font-weight: 600;
+  color: #34495e;
+  margin: 25px 0 12px;
+  border-bottom: 2px solid #ddd;  /* 下に薄い線 */
+  padding-bottom: 4px;
+}
+
+
+
+
+
+/* 見出しの直後に薄い区切り線を入れて本文を読みやすく */
+.heading-band + *{
+  border-top: 1px solid #e9eef3;
+  padding-top: 14px;
+}
+
+/* セクション全体の左右余白と間隔を少しだけ整える（既存と被る場合は不要） */
+section{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 32px;
+}
+
+
+/* Date and Venue より下はすべて中央揃え */
+#date,
+#date ~ section {
+  text-align: center;
+}
+
+#date table,
+#date ul,
+#date ol,
+#date ~ section table,
+#date ~ section ul,
+#date ~ section ol {
+  margin-left: auto;
+  margin-right: auto; /* 表やリストも中央に配置 */
+}
+
+
+.speakers-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.speakers-table th, .speakers-table td {
+  border: 1px solid #ccc;  /* 枠線の色をグレーに */
+  padding: 12px;
+}
+
+.speakers-table th {
+  background-color: #f0f4f8; /* 見出し背景色 */
+  font-weight: bold;
+}
+
+.speakers-table tr:nth-child(even) {
+  background-color: #fafafa; /* 偶数行を薄く色付け */
+}
