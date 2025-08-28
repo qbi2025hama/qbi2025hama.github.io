@@ -176,3 +176,26 @@ section{
 .speakers-table tr:nth-child(even) {
   background-color: #fafafa; /* 偶数行を薄く色付け */
 }
+
+
+/* Abstract を表内で見やすく */
+.speakers-table .abstract-cell {
+  /* text-align: left;            */
+  /* 本文は左揃え */
+  text-align: justify;        
+  /* ← 左右両端揃え */
+  padding: 12px 16px;
+  background-color: #f9f9f9;  /* 薄いグレーで区切る */
+  border: 1px solid #ccc;
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+.speakers-table .abstract-cell strong {
+  color: #2c3e50;
+}
+
+/* Speakers テーブル内のタイトルセルを両端揃えに */
+.speakers-table td:nth-child(3) {
+  text-align: justify;
+  line-height: 1.4;
+}
